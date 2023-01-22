@@ -49,6 +49,10 @@ export class AppModule { }
 <p [innerHTML]="description | highlight: 'page': 'cyan'"></p>
 ```
 
+## Example
+<img  style="margin-right: 15px" src="https://github.com/ultrasonicsoft/ngx-highlight-text/blob/main/projects/ngx-highlight-text/assets/demo.png?raw=true" >
+
+
 ## License
 
 [MIT License](https://github.com/ultrasonicsoft/ngx-highlight-text/blob/main/license) © Balram Chavan
