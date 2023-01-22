@@ -1,6 +1,6 @@
 {
   "name": "ngx-highlight-text",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "This package contains an Angular pipe to highlight a word in a given text.",
   "repository": {
     "type": "git",
