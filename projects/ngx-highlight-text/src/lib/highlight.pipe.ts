@@ -8,17 +8,20 @@ export class HighlightPipe implements PipeTransform {
 
   constructor(private sanitizer: DomSanitizer) { }
 
-  transform(value: string, args: string): unknown {
-    if (!args) {
+  transform(value: string, highlightWord: string, highlightColor?: string): unknown {
+    if (!highlightWord) {
       return value;
     }
-    const regex = new RegExp(args, 'gi');
+    const regex = new RegExp(highlightWord, 'gi');
     const match = value.match(regex);
 
     if (!match) {
       return value;
     }
-    const html = `<span style="background-color:yellow; font-weight:bold">${match[0]}</span>`;
+    if (!highlightColor) {
+      highlightColor = 'yellow';
+    }
+    const html = `<span style="background-color:${highlightColor}; font-weight:bold">${match[0]}</span>`;
     return this.sanitizer.bypassSecurityTrustHtml(value.replace(regex, html));
   }
 

@@ -1,24 +1,54 @@
-# NgxHighlightText
+# Angular Pipe for highlighting the text in HTML
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.13.
+This package contains an Angular pipe to highlight a word in a given text.
 
-## Code scaffolding
+> Note that, this library supports any Angular projects from version 9 onwards till latest version.
 
-Run `ng generate component component-name --project ngx-highlight-text` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-highlight-text`.
-> Note: Don't forget to add `--project ngx-highlight-text` or else it will be added to the default project in your `angular.json` file. 
 
-## Build
+## Install
 
-Run `ng build ngx-highlight-text` to build the project. The build artifacts will be stored in the `dist/` directory.
+You can get it on npm.
 
-## Publishing
+```
+npm install ngx-highlight-text --save
+```
 
-After building your library with `ng build ngx-highlight-text`, go to the dist folder `cd dist/ngx-highlight-text` and run `npm publish`.
+## Setup
 
-## Running unit tests
+*  Import `NgxHighlightTextModule` into your application `AppModule`
 
-Run `ng test ngx-highlight-text` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```ts
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
-## Further help
+import { AppComponent } from './app.component';
+import { NgxHighlightTextModule } from 'projects/ngx-highlight-text/src/public-api';
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    NgxHighlightTextModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+
+
+```
+
+## Usage - Highlight a word
+* Use `innerHTML` property binding of a text element e.g. <p> and pass the source text, word to highlight and optional highlight color. Default highlight color is `yellow`. 
+
+
+```html
+<p [innerHTML]="description | highlight: 'Angular'"></p>
+<p [innerHTML]="description | highlight: 'page': 'cyan'"></p>
+```
+
+## License
+
+[MIT License](https://github.com/ultrasonicsoft/ngx-highlight-text/blob/main/license) © Balram Chavan

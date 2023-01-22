@@ -1,6 +1,29 @@
 {
   "name": "ngx-highlight-text",
   "version": "0.0.1",
+  "description": "This package contains an Angular pipe to highlight a word in a given text.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ultrasonicsoft/ngx-highlight-text"
+  },
+  "keywords": [
+    "highlight",
+    "angular",
+    "keyword",
+    "word",
+    "color",
+    "format",
+    "pipe"
+  ],
+  "author": {
+    "name": "Balram Chavan",
+    "url": "https://balramchavan.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ultrasonicsoft/ngx-highlight-text/issues"
+  },
+  "homepage": "https://github.com/ultrasonicsoft/ngx-highlight-text#readme",
   "peerDependencies": {
     "@angular/common": "^9.1.13",
     "@angular/core": "^9.1.13"
