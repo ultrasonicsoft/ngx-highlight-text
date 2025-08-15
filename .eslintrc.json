@@ -1,0 +1,123 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:codelyzer/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint",
+    "codelyzer"
+  ],
+  "rules": {
+    "@typescript-eslint/align": [
+      "error",
+      {
+        "parameters": true,
+        "statements": true
+      }
+    ],
+    "@typescript-eslint/array-type": "off",
+    "@typescript-eslint/arrow-body-style": ["error", "as-needed"],
+    "curly": "error",
+    "@typescript-eslint/deprecation": ["warn"],
+    "eol-last": ["error", "always"],
+    "import/no-restricted-paths": [
+      "error",
+      {
+        "zones": [
+          {
+            "target": "./src",
+            "from": "./node_modules/rxjs/Rx"
+          }
+        ]
+      }
+    ],
+    "import/first": "error",
+    "indent": ["error", 2],
+    "max-classes-per-file": "off",
+    "max-len": ["error", { "code": 140 }],
+    "@typescript-eslint/member-ordering": [
+      "error",
+      {
+        "default": [
+          "static-field",
+          "instance-field",
+          "static-method",
+          "instance-method"
+        ]
+      }
+    ],
+    "no-console": [
+      "error",
+      { allow: ["debug", "info", "time", "timeEnd", "trace"] }
+    ],
+    "no-empty": "off",
+    "@typescript-eslint/no-inferrable-types": [
+      "error",
+      { "ignoreParams": true }
+    ],
+    "@typescript-eslint/no-non-null-assertion": "error",
+    "@typescript-eslint/no-redundant-jsdoc": "error",
+    "no-fallthrough": "error",
+    "@typescript-eslint/no-var-requires": "off",
+    "quote-props": ["error", "as-needed"],
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"],
+    "space-before-function-paren": [
+      "error",
+      {
+        "anonymous": "never",
+        "asyncArrow": "always",
+        "constructor": "never",
+        "method": "never",
+        "named": "never"
+      }
+    ],
+    "@typescript-eslint/typedef-whitespace": [
+      "error",
+      {
+        "call-signature": "nospace",
+        "index-signature": "nospace",
+        "parameter": "nospace",
+        "property-declaration": "nospace",
+        "variable-declaration": "nospace"
+      }
+    ],
+    "@typescript-eslint/variable-name": [
+      "error",
+      {
+        "ban-keywords": true,
+        "check-format": true,
+        "allow-pascal-case": true
+      }
+    ],
+    "whitespace": [
+      "error",
+      {
+        "check-branch": true,
+        "check-decl": true,
+        "check-operator": true,
+        "check-separator": true,
+        "check-type": true,
+        "check-typecast": true
+      }
+    ],
+    "codelyzer/component-class-suffix": "error",
+    "codelyzer/contextual-lifecycle": "error",
+    "codelyzer/directive-class-suffix": "error",
+    "codelyzer/no-conflicting-lifecycle": "error",
+    "codelyzer/no-host-metadata-property": "error",
+    "codelyzer/no-input-rename": "error",
+    "codelyzer/no-inputs-metadata-property": "error",
+    "codelyzer/no-output-native": "error",
+    "codelyzer/no-output-on-prefix": "error",
+    "codelyzer/no-output-rename": "error",
+    "codelyzer/no-outputs-metadata-property": "error",
+    "codelyzer/template-banana-in-box": "error",
+    "codelyzer/template-no-negated-async": "error",
+    "codelyzer/use-lifecycle-interface": "error",
+    "codelyzer/use-pipe-transform-interface": "error"
+  }
+}
+
